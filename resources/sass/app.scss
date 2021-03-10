@@ -1,0 +1,41 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+ul {
+    text-align: center;
+    list-style-position: inside;
+}
+
+
+.background-image{
+    background-image: url('https://cdn.pixabay.com/photo/2016/03/26/13/09/notebook-1280538_960_720.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    height: 600px;
+}
+
+img{
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.blog-title{
+    margin-left: 20px;
+}
+
+footer{
+    margin-top: 100px;    
+}
+
+ul{
+    list-style-type: none;
+}
+
