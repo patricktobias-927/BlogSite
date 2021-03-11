@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body class="min-vh-100">
 
 <header>
 @include('layouts.header')
@@ -27,9 +27,10 @@
 
  @yield('name')
  @yield('content')
+ @yield('create')
  
 </body>
-
+ <div class=""></div>
 <footer class="bottom">
     @include('layouts.footer')
 </footer>

@@ -51,7 +51,6 @@ footer{
     width: 100%;
     background-color: #333;
     color:#fff;
-
 }
 
 .blog
@@ -74,4 +73,46 @@ footer{
 
 .mt-50{
     margin-top: 50px;
+}
+
+.create{
+    margin-bottom: 40px;
+}
+
+.post_image{
+    width: 100%;
+}
+
+.title{
+    outline: 0;
+    border-width: 0 0 2px;
+    height: 8vh;
+    margin-bottom: 60px;
+    color: #DAA520;
+}
+
+.title:focus{
+        border-color: #DAA520;
+        color: #DAA520;
+}
+
+.description{
+    outline: 0;
+    border-width: 0 0 2px;
+    margin-bottom: 40px;
+    height: 12vh;
+    font-size: x-large;
+}
+
+.description:focus{
+    color: #DAA520;
+    border-color: #DAA520;
+}
+
+.file{
+    margin-bottom: 40px;
+}
+
+.create{
+    font-size: 20px;
 }
