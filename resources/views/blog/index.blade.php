@@ -3,24 +3,35 @@
 
 @section('content')
 
-
-@foreach ($posts as $post)
-
-    <div class="container blog">
+    <div class="container">
         <div class="row">
-            <div class="col-12 text-center mb-50 font-weight-bold h1">
+            <div class="col-12 text-center mt-50 font-weight-bold h1">
                 BLOG POST
             </div>
         </div>
 
-        @if (Auth::check())
+    @if (session()->has('message'))
         <div class="row">
             <div class="col-4">
-                <a href="/blog/create" class="btn btn-lg btn-primary rounded-pill bg-primary font-weight-bold create">Create Post</a>
+                <p class="text-center mb-50 font-weight-bold bg-dark text-light rounded-pill">{{ session()->get('message') }}</p>
             </div>
         </div>
-        @endif
-        
+    @endif
+
+    @if (Auth::check())
+    <div class="row">
+        <div class="col-4">
+            <a href="/blog/create" class="btn btn-lg btn-primary rounded-pill bg-primary font-weight-bold mt-50 create">Create Post</a>
+        </div>
+    </div>
+    @endif
+    
+</div>
+
+
+@foreach ($posts as $post)
+
+    <div class="container blog">
         <div class="row">
                 <div class="col-6">
                     <img class="post_image" src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" alt="" srcset="">
