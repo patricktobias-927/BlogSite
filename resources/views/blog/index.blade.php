@@ -16,11 +16,11 @@
             </div>
             <div class="col-4  blog-title">
                 <p class="font-weight-bold h1">My First Blog Post</p>
-                <p class="font-italic h5 text-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <p class="font-italic h5">By <strong class="font-italic font-weight-bold text-primary">Patrick Tobias</strong>, 1 day ago. </p>
                 <br>
                 <p class="font-weight-bold h4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <br>
-                <a href="" class="btn btn-primary">Find Out More</a>
+                <a href="" class="btn btn-primary text-center font-weight-bold rounded-pill text-light h4">Keep Reading</a>
             </div>
         </div>
     </div>
