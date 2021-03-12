@@ -10104,3 +10104,14 @@ footer {
 .create {
   font-size: 20px;
 }
+
+.edit {
+  float: right;
+  margin-top: 10px;
+  outline: 0;
+  border-width: 0 0 2px;
+}
+
+.edit:focus {
+  border-color: #DAA520;
+}

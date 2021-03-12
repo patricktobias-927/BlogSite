@@ -66,19 +66,20 @@ class PostsController extends Controller
      */
     public function show($slug)
     {
-        // return view('blog.show')
-        //     -with('post', Post::where('slug', $slug)->first());
+        return view('blog.show')
+            ->with('post', Post::where('slug', $slug)->first());
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  string  $slug
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($slug)
     {
-        //
+        return view('blog.edit')
+        ->with('post', Post::where('slug', $slug)->first());
     }
 
     /**

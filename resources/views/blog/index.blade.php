@@ -43,9 +43,14 @@
                 <p class="font-weight-bold h4">{{ $post->description }}.</p>
                 <br>
                 <a href="/blog/{{ $post->slug }}" class="btn btn-lg btn-primary text-center font-weight-bold rounded-pill text-light h3">Keep Reading</a>
+                @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
+                <a href="/blog/{{ $post->slug }}/edit" class="edit text-dark font-italic h4" >Edit</a>
+              @endif
             </div>
         </div>
     </div>
+
+  
 
     <br>
     

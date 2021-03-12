@@ -28,6 +28,8 @@
  @yield('name')
  @yield('content')
  @yield('create')
+ @yield('edit')
+
  
 </body>
  <div class=""></div>
