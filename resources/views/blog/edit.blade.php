@@ -5,7 +5,7 @@
     <div class="container blog">
         <div class="row">
             <div class="col-12 text-center mb-50 font-weight-bold h1">
-                Create Post
+                Update Post
             </div>
         </div>
     </div>
@@ -26,8 +26,9 @@
     </div>   
     @endif
 
-    <form action="/blog" method="POST" enctype="multipart/form-data">
+    <form action="/blog/{{ $post->slug }}" method="POST" enctype="multipart/form-data">
     @csrf
+    @method('PUT')
 
     <div class="container">
         <div class="row">
@@ -37,7 +38,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <input name="title" type="text" class="form-control w-100 shadow rounded title font-weight-bold">
+                <input name="title" type="text" value="{{ $post->title }}" class="form-control w-100 shadow rounded title font-weight-bold">
             </div>
         </div>
         <div class="row">
@@ -47,7 +48,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <input name="description" type="text" class="form-control w-100 shadow rounded description font-weight-bold">
+                <textarea name="description" type="text" class="form-control w-100 shadow rounded description font-weight-bold">{{ $post->description }}</textarea>
             </div>
         </div>
         <div class="row">
@@ -57,7 +58,7 @@
         </div>
         <div class="row">
             <div class="col-4">
-                <button type="submit" class="btn btn-lg btn-primary rounded-pill bg-primary font-weight-bold create">Submit Post</button>
+                <button type="submit" class="btn btn-lg btn-primary rounded-pill bg-primary font-weight-bold create">Update Post</button>
             </div>
         </div>
     </div>

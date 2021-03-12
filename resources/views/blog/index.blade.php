@@ -11,7 +11,7 @@
         </div>
 
     @if (session()->has('message'))
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             <div class="col-4">
                 <p class="text-center mb-50 font-weight-bold bg-dark text-light rounded-pill">{{ session()->get('message') }}</p>
             </div>
@@ -34,7 +34,7 @@
     <div class="container blog">
         <div class="row">
                 <div class="col-6">
-                    <img class="post_image" src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" alt="" srcset="">
+                    <img class="post_image" src="{{ asset('images/' . $post->image_path) }}" alt="" srcset="">
             </div>
             <div class="col-4  blog-title">
                 <p class="font-weight-bold h1">{{ $post->title }}</p>
@@ -43,14 +43,20 @@
                 <p class="font-weight-bold h4">{{ $post->description }}.</p>
                 <br>
                 <a href="/blog/{{ $post->slug }}" class="btn btn-lg btn-primary text-center font-weight-bold rounded-pill text-light h3">Keep Reading</a>
+
                 @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
                 <a href="/blog/{{ $post->slug }}/edit" class="edit text-dark font-italic h4" >Edit</a>
+
+                <form action="/blog/{{ $post->slug }}" method="POST">
+                    @csrf
+                    @method('delete')
+
+                    <button class="btn bg-0 btn-lg text-danger font-italic float-right">Delete</button>
+                </form>
               @endif
             </div>
         </div>
     </div>
-
-  
 
     <br>
     

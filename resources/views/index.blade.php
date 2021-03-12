@@ -33,7 +33,7 @@
             <br>
             <p class="font-weight-bold h4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <br>
-            <a href="" class="btn btn-primary">Find Out More</a>
+            <a href="/blog" class="btn btn-primary">Find Out More</a>
         </div>
     </div>
 </div>
